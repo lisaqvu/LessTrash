@@ -1,29 +1,74 @@
-import React, { PureComponent } from 'react';
-import Header from './components/header/Header';
-import Card from './components/card/Card';
-import GameOver from './components/card/GameOver';
-
-import './styles/main.css';
+import React, { PureComponent } from "react";
+// import Header from './components/header/Header';
+// import Card from './components/card/Card';
+// import GameOver from './components/card/GameOver';
+import slider from "./assets/slider.png";
+import "./styles/main.css";
+import chau from "./assets/coin.png";
+import mien from "./assets/coin.png";
+import huong from "./assets/coin.png";
+import anh from "./assets/coin.png";
+import tham from "./assets/coin.png";
 
 class Home extends PureComponent {
-    render() {
-        return (
-            <header class="masthead">
-            <div class="container h-100">
-              <div class="row h-100 align-items-center justify-content-center text-center">
-                <div class="col-lg-10 align-self-end">
-                  <h1 class="text-uppercase text-white font-weight-bold">Your Favorite Source of Free Bootstrap Themes</h1>
-                  <hr class="divider my-4"></hr>
-                </div>
-                <div class="col-lg-8 align-self-baseline">
-                  <p class="text-white-75 font-weight-light mb-5">Start Bootstrap can help you build better websites using the Bootstrap framework! Just download a theme and start customizing, no strings attached!</p>
-                  {/* <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a> */}
-                </div>
-              </div>
-            </div>
-          </header>
-        );
-    }
+  render() {
+    return (
+      <header className="masthead">
+        <div className="container h-100">
+          <img src={slider} alt={"slider"} className="slider" />
+        </div>
+        <div>
+          <p class="text-center header_about_us">About us</p>
+          <div className="hr_button_wrapper">
+            <button className="hr_button" />
+          </div>
+          <p class="text-center slogan">
+            Our world is a beautiful place and it has sustained everything
+            living on it for millions of years. Although our presence has done
+            much damage to it, we still have a chance to change it.
+          </p>
+          <div className="about_us_container">
+            <table className="about_us_table">
+              <tr>
+                <td>
+                  <img className="avatar_about_us" src={chau} alt={"chau"} />
+                </td>
+                <td>
+                  <img className="avatar_about_us" src={chau} alt={"chau"} />
+                </td>
+                <td>
+                  <img className="avatar_about_us" src={chau} alt={"chau"} />
+                </td>
+                <td>
+                  <img className="avatar_about_us" src={chau} alt={"chau"} />
+                </td>
+                <td>
+                  <img className="avatar_about_us" src={chau} alt={"chau"} />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p className="about_us_name">Quynh Chau</p>
+                </td>
+                <td>
+                  <p className="about_us_name">Quynh Chau</p>
+                </td>
+                <td>
+                  <p className="about_us_name">Quynh Chau</p>
+                </td>
+                <td>
+                  <p className="about_us_name">Quynh Chau</p>
+                </td>
+                <td>
+                  <p className="about_us_name">Quynh Chau</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </header>
+    );
+  }
 }
 
 export default Home;

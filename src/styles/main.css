@@ -1,78 +1,151 @@
 body {
-    margin: 0;
-  }
-  
-  .grid-container {
-    display: grid;
-    grid-gap: 5px;
-    grid-template-columns: auto auto auto auto;
-    padding: 30px 150px;
-  }
-  
-  .grid-header-container {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    background-color: #c9d1f5;
-    padding: 10px;
-  }
-  
-  .grid-item {
-    border: 1px solid rgba(0, 0, 0, 0.8);
-  }
-  
-  .justify-left {
-    text-align: left
-  }
-  
-  .justify-end {
-    text-align: right;
-  }
-  
-  .justify-center {
-    text-align: center;
-  }
-  
-  .timer {
-    color: #5168e9;
-    font-size: 20px;
-    font-weight: bold;
-  }
-  
-  .restart-button {
-    width: 15em;
-    height: 3em;
-    color: white;
-    background-color: #5168e9;
-    border: 0;
-  }
-  
-  .game-status-text {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: rgb(24, 21, 16);
-    font-weight: bold;
-  }
-  
-  .card {
-    border-radius: 10px;
-    width: 100%;
-    height: 10em;
-    background-color: rgb(75, 42, 165);
-    color: white;
-    font-size: 15px;
-  }
-  
-  .hide-card {
-    visibility: hidden;
-  }
-  
-  .card-front {
-    background-color: #999999;
-    box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
-  }
-  
-  .card-back {
-    font-weight: bold;
-    position:absolute;
-    /* box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6); */
-  }
-  
+  margin: 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: auto auto auto auto;
+  padding: 30px 150px;
+}
+
+.grid-header-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  /* background-color: #c9d1f5; */
+  padding: 10px;
+}
+
+.grid-item {
+  border: 1px solid rgba(0, 0, 0, 0.8);
+}
+
+.justify-left {
+  text-align: left;
+}
+
+.justify-end {
+  text-align: right;
+}
+
+.justify-center {
+  text-align: center;
+}
+
+.timer {
+  color: #5168e9;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.restart-button {
+  width: 15em;
+  height: 3em;
+  color: white;
+  background-color: #5168e9;
+  border: 0;
+}
+
+.game-status-text {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(24, 21, 16);
+  font-weight: bold;
+}
+
+.card {
+  border-radius: 10px;
+  width: 100%;
+  height: 10em;
+  background-color: rgb(75, 42, 165);
+  color: white;
+  font-size: 15px;
+}
+
+.hide-card {
+  visibility: hidden;
+}
+
+.card-front {
+  background-color: #8bc34a;
+  box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+  background: url(https://api.adorable.io/avatars/285/abott@adorable.png);
+}
+
+.card-back {
+  background-color: #ffeb3b;
+  font-weight: bold;
+  position: absolute;
+  /* box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6); */
+}
+/* fix card position when flipping */
+.single_card {
+  height: 150px;
+}
+.indigo {
+  /* margin-left: 50%; */
+  background-color: #c9d1f5;
+}
+.nav-link {
+  font-size: 25px;
+  padding-right: 1.5rem !important;
+  padding-left: 1.5rem !important;
+  font-weight: bold;
+  color: black;
+}
+.score {
+  font-size: 25px;
+  color: #f53218;
+  font-size: 20px;
+  font-weight: bold;
+}
+img {
+  /* float: left; */
+  width: 80px;
+  height: 80px;
+}
+.myNavbar {
+  font-family: "Lobster", Georgia, Times, serif;
+  font-style: italic;
+}
+img.slider {
+  height: 100vh;
+  width: 100vw;
+}
+.masthead > .container {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+  overflow: hidden;
+}
+p.slogan {
+  width: 60%;
+  margin: auto;
+}
+.hr_button_wrapper {
+  text-align: center;
+}
+.hr_button {
+  background-color: #157d44;
+  width: 330px;
+  height: 3px;
+  border: 0;
+}
+.header_about_us {
+  font-weight: 500;
+  line-height: 1.1;
+  font-size: 2.5rem;
+  margin: 0;
+}
+.about_us_container {
+  margin-top: 20px;
+}
+.about_us_table {
+  margin: auto;
+}
+.about_us_table img {
+  width: 70px;
+  height: 70px;
+  padding: 8px;
+}
+.about_us_name {
+  font-size: 10px;
+}
