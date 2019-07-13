@@ -72,8 +72,7 @@ body {
   
   .card-back {
     font-weight: bold;
+    position:absolute;
+    /* box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6); */
   }
   
-  .react-card-front {
-    position: unset !important;
-  }

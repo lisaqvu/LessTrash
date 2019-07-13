@@ -1,108 +1,44 @@
-import React, { PureComponent } from 'react';
-import Header from './components/header/Header';
-import Card from './components/card/Card';
-import GameOver from './components/card/GameOver';
+import React, {Component} from "react";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import CardGame from "./CardGame";
+import Home from "./Home";
+function Recyle() {
+  return <h2>Placeholder</h2>;
+}
 
-import './styles/main.css';
+function Reuse() {
+  return <h2>Placeholder</h2>;
+}
 
-class App extends PureComponent {
-
-  state = { 
-    isFlipped: Array(16).fill(false),
-    shuffledCard: App.duplicateCard().sort(() => Math.random() - 0.5),
-    clickCount: 1,
-    prevSelectedCard: -1,
-    prevCardId: -1
-  };
-
-  static duplicateCard = () => {
-    return [0,1,2,3,4,5,6,7].reduce((preValue, current, index, array) => {
-      return preValue.concat([current, current])
-    },[]);
-  };
-
-  handleClick = event => {
-    event.preventDefault();
-    const cardId = event.target.id;
-    const newFlipps = this.state.isFlipped.slice();
-    this.setState({
-        prevSelectedCard: this.state.shuffledCard[cardId],
-        prevCardId: cardId
-    });
-
-    if (newFlipps[cardId] === false) {
-      newFlipps[cardId] = !newFlipps[cardId];
-      this.setState(prevState => ({ 
-        isFlipped: newFlipps,
-        clickCount: this.state.clickCount + 1
-      }));
-
-      if (this.state.clickCount === 2) {
-        this.setState({ clickCount: 1 });
-        const prevCardId = this.state.prevCardId;
-        const newCard = this.state.shuffledCard[cardId];
-        const previousCard = this.state.prevSelectedCard;
-
-        this.isCardMatch(previousCard, newCard, prevCardId, cardId);
-      }
-    }
-  };
-
-  isCardMatch = (card1, card2, card1Id, card2Id) => {
-    if (card1 === card2) {
-      const hideCard = this.state.shuffledCard.slice();
-      hideCard[card1Id] = -1;
-      hideCard[card2Id] = -1;
-      setTimeout(() => {
-        this.setState(prevState => ({
-          shuffledCard: hideCard
-        }))
-      }, 1000);
-    } else {
-      const flipBack = this.state.isFlipped.slice();
-      flipBack[card1Id] = false;
-      flipBack[card2Id] = false;
-      setTimeout(() => {
-        this.setState(prevState => ({ isFlipped: flipBack }));
-      }, 1000);
-    }
-  };
-
-  restartGame = () => {
-    this.setState({
-      isFlipped: Array(16).fill(false),
-      shuffledCard: App.duplicateCard().sort(() => Math.random() - 0.5),
-      clickCount: 1,
-      prevSelectedCard: -1,
-      prevCardId: -1
-    });
-  };
-
-  isGameOver = () => {
-    return this.state.isFlipped.every((element, index, array) => element !== false);
-  };
-
+class App extends Component {
   render() {
-    return (
-     <div>
-       <Header restartGame={this.restartGame} />
-       { this.isGameOver() ? <GameOver restartGame={this.restartGame} /> :
-       <div className="grid-container">
-          {
-            this.state.shuffledCard.map((cardNumber, index) => 
-              <Card
-                key={index} 
-                id={index} 
-                cardNumber={cardNumber} 
-                isFlipped={this.state.isFlipped[index]} 
-                handleClick={this.handleClick}     
-              />
-            )
-          }
-        </div>
-       }
-     </div>
-    );
+  return (
+    <Router>
+      <div>
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+          <ul className="navbar-nav mr-auto">
+            <li>
+              <Link to="/" className="nav-link">Home</Link>
+            </li>
+            <li>
+              <Link to="/reduce/" className="nav-link">Reduce</Link>
+            </li>
+            <li>
+              <Link to="/recycle/" className="nav-link">Recycle</Link>
+            </li>
+            <li>
+              <Link to="/reuse/" className="nav-link">Reuse</Link>
+            </li>
+          </ul>
+        </nav>
+
+        <Route path="/" exact component={Home} />
+        <Route path="/reduce/" component={CardGame} />
+        <Route path="/recyle/" component={Recyle} />
+        <Route path="/reuse/" component={Reuse} />
+      </div>
+    </Router>
+  );
   }
 }
 
