@@ -1,7 +1,4 @@
 import React, { PureComponent } from 'react';
-import Header from './components/header/Header';
-import Card from './components/card/Card';
-import GameOver from './components/card/GameOver';
 
 import './styles/main.css';
 
