@@ -1,9 +1,11 @@
 {
-  "name": "sample-app",
+  "name": "LessTrash",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "bootstrap": "^4.3.1",
     "react": "^16.8.6",
+    "react-bootstrap": "^1.0.0-beta.9",
     "react-card-flip": "^0.8.0",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1"
