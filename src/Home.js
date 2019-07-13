@@ -1,14 +1,10 @@
 import React, { PureComponent } from "react";
-// import Header from './components/header/Header';
-// import Card from './components/card/Card';
-// import GameOver from './components/card/GameOver';
 import slider from "./assets/slider.png";
 import "./styles/main.css";
 import chau from "./assets/coin.png";
-import mien from "./assets/coin.png";
-import huong from "./assets/coin.png";
-import anh from "./assets/coin.png";
-import tham from "./assets/coin.png";
+import React, { PureComponent } from 'react';
+
+import './styles/main.css';
 
 class Home extends PureComponent {
   render() {
