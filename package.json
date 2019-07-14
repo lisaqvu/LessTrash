@@ -1,11 +1,13 @@
 {
   "name": "LessTrash",
   "version": "0.1.0",
+  "homepage": "https://lisaqvu.github.io/LessTrash/",
   "private": true,
   "homepage": "https://lisaqvu.github.io/LessTrash",
   "dependencies": {
     "@material-ui/core": "^4.2.0",
     "bootstrap": "^4.3.1",
+    "gh-pages": "^2.0.1",
     "immutability-helper": "^3.0.1",
     "react": "^16.8.6",
     "react-bootstrap-validation": "^0.1.11",
@@ -15,13 +17,15 @@
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
-    "video-react": "^0.14.0"
+    "react-youtube": "^7.9.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

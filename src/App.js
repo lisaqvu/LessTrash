@@ -7,16 +7,25 @@ import { DndProvider } from "react-dnd";
 import HTML5Backend from "react-dnd-html5-backend";
 import logo from "./assets/logo.png";
 
-import { Player } from "video-react";
-import "../node_modules/video-react/dist/video-react.css"; // import css
+import YouTube from 'react-youtube';
 
 function Video() {
-  return (
-    <Player
-      playsInline
-      src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
-    />
-  );
+    const opts = {
+      height: '390',
+      width: '640',
+      playerVars: { // https://developers.google.com/youtube/player_parameters
+        autoplay: 1
+      }
+    };
+ 
+    return (
+      <YouTube
+        videoId="37uk-ZffJ10"
+        opts={opts}
+        // onReady={this._onReady}
+      />
+    );
+    /* <Player url="https://media.w3.org/2010/05/sintel/trailer_hd.mp4" playing /> */
 }
 
 function Drag() {
