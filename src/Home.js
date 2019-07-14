@@ -4,12 +4,13 @@ import "./styles/main.css";
 import chau from "./assets/coin.png";
 import './styles/main.css';
 
+
 class Home extends PureComponent {
   render() {
     return (
       <header className="masthead">
         <div className="container h-100">
-          <img src={slider} alt={"slider"} className="slider" />
+          <img src={slider} alt={"slider"} className="slider"/>
         </div>
         <div>
           <p class="text-center header_about_us">About us</p>
@@ -21,9 +22,10 @@ class Home extends PureComponent {
             living on it for millions of years. Although our presence has done
             much damage to it, we still have a chance to change it.
           </p>
-          <div className="about_us_container">
+          {/* <div className="about_us_container">
             <table className="about_us_table">
               <tr>
+                \\\
                 <td>
                   <img className="avatar_about_us" src={chau} alt={"chau"} />
                 </td>
@@ -58,7 +60,7 @@ class Home extends PureComponent {
                 </td>
               </tr>
             </table>
-          </div>
+          </div> */}
         </div>
       </header>
     );

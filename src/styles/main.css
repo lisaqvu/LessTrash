@@ -83,14 +83,11 @@ body {
 }
 .indigo {
   /* margin-left: 50%; */
-  background-color: #c9d1f5;
+  background-color: #2d275f;
 }
 .nav-link {
   font-size: 25px;
-  padding-right: 1.5rem !important;
-  padding-left: 1.5rem !important;
-  font-weight: bold;
-  color: black;
+  color: white;
 }
 .score {
   font-size: 25px;
@@ -98,24 +95,19 @@ body {
   font-size: 20px;
   font-weight: bold;
 }
-img {
+.logo {
   /* float: left; */
-  width: 80px;
-  height: 80px;
-}
-.myNavbar {
-  font-family: "Lobster", Georgia, Times, serif;
-  font-style: italic;
-}
-img.slider {
-  height: 100vh;
-  width: 100vw;
+  width: 20vw;
+  margin:12px;
 }
 .masthead > .container {
-  padding-left: 0 !important;
-  margin-left: 0 !important;
-  overflow: hidden;
+  padding:0;
+  margin:0;
 }
+.slider {
+  width: 100vw;
+}
+
 p.slogan {
   width: 60%;
   margin: auto;

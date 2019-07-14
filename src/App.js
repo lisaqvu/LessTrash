@@ -5,17 +5,21 @@ import Home from "./Home";
 import DnD from "./components/drag/DnD";
 import { DndProvider } from "react-dnd";
 import HTML5Backend from "react-dnd-html5-backend";
-
 import logo from "./assets/logo.png";
-function Recyle() {
-  return <h2>Game lật bài</h2>;
+
+import { Player } from "video-react";
+import "../node_modules/video-react/dist/video-react.css"; // import css
+
+function Video() {
+  return (
+    <Player
+      playsInline
+      src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
+    />
+  );
 }
 
-function Reuse() {
-  return <h2>Video embedding</h2>;
-}
-
-function Drag(){
+function Drag() {
   return (
     <div>
       <DndProvider backend={HTML5Backend}>
@@ -24,23 +28,22 @@ function Drag(){
     </div>
   );
 }
+
 class App extends Component {
   render() {
     return (
       <Router>
         <div>
           <nav className="navbar navbar-expand-lg indigo">
-          <img src={logo} alt={"logo"} />
+            <Link to="./">
+              <img className="logo" src={logo} alt={"logo"} />
+            </Link>
+
             <div
-              className="collapse navbar-collapse myNavbar"
+              className="collapse navbar-collapse navbar-right"
               id="navbarText"
             >
-              <ul className="navbar-nav mr-auto">
-                <li className="nav-item active">
-                  <Link className="nav-link" to="./">
-                    Home
-                  </Link>
-                </li>
+              <ul className="navbar-nav ml-auto">
                 <li className="nav-item">
                   <Link className="nav-link" to="./reuse">
                     Reuse
@@ -61,11 +64,10 @@ class App extends Component {
           </nav>
           <Route path="/" exact component={Home} />
           <Route path="/reduce/" component={CardGame} />
-          <Route path="/recyle/" component={Recyle} />
-          <Route path="/reuse/" component={Reuse} />
+          <Route path="/recyle/" component={Drag} />
+          <Route path="/reuse/" component={Video} />
         </div>
       </Router>
-      
     );
   }
 }
