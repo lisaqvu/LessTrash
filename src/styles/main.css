@@ -6,12 +6,12 @@ body {
   display: grid;
   grid-gap: 5px;
   grid-template-columns: auto auto auto auto;
-  padding: 30px 150px;
+  padding: 11px 150px;
 }
 
 .grid-header-container {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 10fr 15fr auto 15fr 10fr;
   /* background-color: #c9d1f5; */
   padding: 10px;
 }
@@ -49,6 +49,7 @@ body {
 .game-status-text {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: rgb(24, 21, 16);
+  margin-top: 20px;
   font-weight: bold;
 }
 
@@ -90,19 +91,18 @@ body {
   color: white;
 }
 .score {
-  font-size: 25px;
   color: #f53218;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
 }
 .logo {
   /* float: left; */
   width: 20vw;
-  margin:12px;
+  margin: 12px;
 }
 .masthead > .container {
-  padding:0;
-  margin:0;
+  padding: 0;
+  margin: 0;
 }
 .slider {
   width: 100vw;
@@ -144,15 +144,16 @@ p.slogan {
 .restart-button {
   background-color: white;
   border: 0;
+  margin-top: 20px;
 }
 .img_restart {
   width: 50px;
   height: 50px;
-<<<<<<< HEAD
 }
 
-.restart-button:focus{
-  outline:none;
-=======
->>>>>>> f3fe00a005a7f8079762d66767ddce2c0c56a936
+.restart-button:focus {
+  outline: none;
+}
+.margin-bottom-zero p {
+  margin-bottom: 0;
 }
