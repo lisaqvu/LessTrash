@@ -63,9 +63,9 @@ class App extends Component {
             </div>
           </nav>
           <Route path="/" exact component={Home} />
-          <Route path="/reduce/" component={CardGame} />
-          <Route path="/recyle/" component={Drag} />
           <Route path="/reuse/" component={Video} />
+          <Route path="/reduce/" component={CardGame} />
+          <Route path="/recycle/" component={Drag} />
         </div>
       </Router>
     );
