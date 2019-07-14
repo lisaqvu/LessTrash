@@ -1,9 +1,6 @@
 import React, { PureComponent } from "react";
 import slider from "./assets/slider.png";
 import "./styles/main.css";
-// import chau from "./assets/coin.png";
-import './styles/main.css';
-
 
 class Home extends PureComponent {
   render() {

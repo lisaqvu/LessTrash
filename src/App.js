@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Route, Link } from "react-router-dom";
 import CardGame from "./CardGame";
 import Home from "./Home";
 import DnD from "./components/drag/DnD";
@@ -7,16 +7,25 @@ import { DndProvider } from "react-dnd";
 import HTML5Backend from "react-dnd-html5-backend";
 import logo from "./assets/logo.png";
 
-import { Player } from "video-react";
-import "../node_modules/video-react/dist/video-react.css"; // import css
+import YouTube from 'react-youtube';
 
 function Video() {
-  return (
-    <Player
-      playsInline
-      src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
-    />
-  );
+    const opts = {
+      height: '390',
+      width: '640',
+      playerVars: { // https://developers.google.com/youtube/player_parameters
+        autoplay: 1
+      }
+    };
+ 
+    return (
+      <YouTube
+        videoId="37uk-ZffJ10"
+        opts={opts}
+        // onReady={this._onReady}
+      />
+    );
+    /* <Player url="https://media.w3.org/2010/05/sintel/trailer_hd.mp4" playing /> */
 }
 
 function Drag() {
@@ -32,7 +41,7 @@ function Drag() {
 class App extends Component {
   render() {
     return (
-      <Router>
+      <Router basename='/'>
         <div>
           <nav className="navbar navbar-expand-lg indigo">
             <Link to="./">
@@ -44,14 +53,14 @@ class App extends Component {
               id="navbarText"
             >
               <ul className="navbar-nav ml-auto">
-                <li className="nav-item">
-                  <Link className="nav-link" to="./reuse">
-                    Reuse
+              <li className="nav-item">
+                  <Link className="nav-link" to="./reduce">
+                    Reduce
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="./reduce">
-                    Reduce
+                  <Link className="nav-link" to="./reuse">
+                    Reuse
                   </Link>
                 </li>
                 <li className="nav-item">
@@ -63,9 +72,9 @@ class App extends Component {
             </div>
           </nav>
           <Route path="/" exact component={Home} />
-          <Route path="/reduce/" component={CardGame} />
-          <Route path="/recyle/" component={Drag} />
-          <Route path="/reuse/" component={Video} />
+          <Route path="/reduce" component={CardGame} />
+          <Route path="/reuse" component={Drag} />
+          <Route path="/recycle" component={Video} />
         </div>
       </Router>
     );
