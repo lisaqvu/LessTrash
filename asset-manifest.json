@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/LessTrash/static/css/main.970e48cf.chunk.css",
-    "main.js": "/LessTrash/static/js/main.23c53c3d.chunk.js",
-    "main.js.map": "/LessTrash/static/js/main.23c53c3d.chunk.js.map",
+    "main.css": "/LessTrash/static/css/main.c2909ac4.chunk.css",
+    "main.js": "/LessTrash/static/js/main.e37e355d.chunk.js",
+    "main.js.map": "/LessTrash/static/js/main.e37e355d.chunk.js.map",
     "runtime~main.js": "/LessTrash/static/js/runtime~main.33962fa5.js",
     "runtime~main.js.map": "/LessTrash/static/js/runtime~main.33962fa5.js.map",
     "static/js/2.050a5fb7.chunk.js": "/LessTrash/static/js/2.050a5fb7.chunk.js",
     "static/js/2.050a5fb7.chunk.js.map": "/LessTrash/static/js/2.050a5fb7.chunk.js.map",
     "index.html": "/LessTrash/index.html",
-    "precache-manifest.462fcf92d33c2b99a5347977bf61ca80.js": "/LessTrash/precache-manifest.462fcf92d33c2b99a5347977bf61ca80.js",
+    "precache-manifest.67f6798a84d35aca820f8d0767e61753.js": "/LessTrash/precache-manifest.67f6798a84d35aca820f8d0767e61753.js",
     "service-worker.js": "/LessTrash/service-worker.js",
-    "static/css/main.970e48cf.chunk.css.map": "/LessTrash/static/css/main.970e48cf.chunk.css.map",
+    "static/css/main.c2909ac4.chunk.css.map": "/LessTrash/static/css/main.c2909ac4.chunk.css.map",
     "static/media/main.css": "/LessTrash/static/media/card_back.02c71123.jpg",
     "static/media/logo.png": "/LessTrash/static/media/logo.21a09852.png",
     "static/media/slider.png": "/LessTrash/static/media/slider.4a1f8e4b.png"
