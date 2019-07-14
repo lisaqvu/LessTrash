@@ -158,3 +158,8 @@ p.slogan {
   margin-bottom: 0;
 }
 
+.video {
+  align-content:center;
+  width:max-content;
+  padding:10px;
+}

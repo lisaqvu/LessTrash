@@ -17,13 +17,15 @@ function Video() {
         autoplay: 1
       }
     };
- 
+    
     return (
+      <div className="container video">
       <YouTube
         videoId="37uk-ZffJ10"
         opts={opts}
         // onReady={this._onReady}
       />
+      </div>
     );
     /* <Player url="https://media.w3.org/2010/05/sintel/trailer_hd.mp4" playing /> */
 }
