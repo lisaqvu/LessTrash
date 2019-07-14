@@ -45,13 +45,13 @@ class App extends Component {
             >
               <ul className="navbar-nav ml-auto">
                 <li className="nav-item">
-                  <Link className="nav-link" to="./reuse">
-                    Reuse
+                  <Link className="nav-link" to="./reduce">
+                    Reduce
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="./reduce">
-                    Reduce
+                  <Link className="nav-link" to="./reuse">
+                    Reuse
                   </Link>
                 </li>
                 <li className="nav-item">
@@ -64,8 +64,8 @@ class App extends Component {
           </nav>
           <Route path="/" exact component={Home} />
           <Route path="/reduce/" component={CardGame} />
-          <Route path="/recyle/" component={Drag} />
           <Route path="/reuse/" component={Video} />
+          <Route path="/recycle/" component={Drag} />
         </div>
       </Router>
     );
