@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Route, Link } from "react-router-dom";
 import CardGame from "./CardGame";
 import Home from "./Home";
 import DnD from "./components/drag/DnD";
@@ -32,10 +32,10 @@ function Drag() {
 class App extends Component {
   render() {
     return (
-      <Router>
+      <Router basename="/">
         <div>
           <nav className="navbar navbar-expand-lg indigo">
-            <Link to="./">
+            <Link to="/">
               <img className="logo" src={logo} alt={"logo"} />
             </Link>
 
@@ -45,17 +45,17 @@ class App extends Component {
             >
               <ul className="navbar-nav ml-auto">
                 <li className="nav-item">
-                  <Link className="nav-link" to="./reduce">
+                  <Link className="nav-link" to="/reduce">
                     Reduce
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="./reuse">
+                  <Link className="nav-link" to="/reuse">
                     Reuse
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="./recycle">
+                  <Link className="nav-link" to="/recycle">
                     Recycle
                   </Link>
                 </li>
