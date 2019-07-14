@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Route, Link } from "react-router-dom";
 import CardGame from "./CardGame";
 import Home from "./Home";
 import DnD from "./components/drag/DnD";
@@ -14,7 +14,7 @@ function Video() {
   return (
     <Player
       playsInline
-      src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
+      src="https://www.youtube.com/watch?v=HkHEJEzMKwc"
     />
   );
 }
@@ -32,7 +32,7 @@ function Drag() {
 class App extends Component {
   render() {
     return (
-      <Router>
+      <Router basename='/'>
         <div>
           <nav className="navbar navbar-expand-lg indigo">
             <Link to="./">
@@ -64,7 +64,7 @@ class App extends Component {
           </nav>
           <Route path="/" exact component={Home} />
           <Route path="/reduce/" component={CardGame} />
-          <Route path="/recyle/" component={Drag} />
+          <Route path="/recyle/" component={Video} />
           <Route path="/reuse/" component={Video} />
         </div>
       </Router>
