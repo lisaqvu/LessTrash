@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/LessTrash/static/css/main.296fbec7.chunk.css",
+    "main.js": "/LessTrash/static/js/main.4b5bbc08.chunk.js",
+    "main.js.map": "/LessTrash/static/js/main.4b5bbc08.chunk.js.map",
+    "runtime~main.js": "/LessTrash/static/js/runtime~main.33962fa5.js",
+    "runtime~main.js.map": "/LessTrash/static/js/runtime~main.33962fa5.js.map",
+    "static/css/2.14686bf5.chunk.css": "/LessTrash/static/css/2.14686bf5.chunk.css",
+    "static/js/2.dc49d2a5.chunk.js": "/LessTrash/static/js/2.dc49d2a5.chunk.js",
+    "static/js/2.dc49d2a5.chunk.js.map": "/LessTrash/static/js/2.dc49d2a5.chunk.js.map",
+    "index.html": "/LessTrash/index.html",
+    "precache-manifest.660c70625c1c62c65df00091e4304b4d.js": "/LessTrash/precache-manifest.660c70625c1c62c65df00091e4304b4d.js",
+    "service-worker.js": "/LessTrash/service-worker.js",
+    "static/css/2.14686bf5.chunk.css.map": "/LessTrash/static/css/2.14686bf5.chunk.css.map",
+    "static/css/main.296fbec7.chunk.css.map": "/LessTrash/static/css/main.296fbec7.chunk.css.map",
+    "static/media/coin.png": "/LessTrash/static/media/coin.a2ef5859.png",
+    "static/media/logo.png": "/LessTrash/static/media/logo.21a09852.png",
+    "static/media/slider.png": "/LessTrash/static/media/slider.4a1f8e4b.png"
+  }
+}
