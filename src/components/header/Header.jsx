@@ -2,7 +2,6 @@ import React from 'react';
 import Counter from './Counter';
 const Header = ({ restartGame,score }) => (
   <div className="grid-header-container">
-    <div className="justify-center game-status-text"></div>
     <div className="justify-center game-status-text">
     <label><Counter score={score}/></label>
     </div>
