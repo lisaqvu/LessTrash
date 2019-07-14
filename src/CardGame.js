@@ -12,7 +12,8 @@ class CardGame extends PureComponent {
     shuffledCard: CardGame.duplicateCard().sort(() => Math.random() - 0.5),
     clickCount: 1,
     prevSelectedCard: -1,
-    prevCardId: -1
+    prevCardId: -1,
+    score: 0 
   };
 
   static duplicateCard = () => {
@@ -32,10 +33,10 @@ class CardGame extends PureComponent {
 
     if (newFlipps[cardId] === false) {
       newFlipps[cardId] = !newFlipps[cardId];
-      this.setState(prevState => ({ 
+      this.setState({ 
         isFlipped: newFlipps,
         clickCount: this.state.clickCount + 1
-      }));
+      });
 
       if (this.state.clickCount === 2) {
         this.setState({ clickCount: 1 });
@@ -54,16 +55,21 @@ class CardGame extends PureComponent {
       hideCard[card1Id] = -1;
       hideCard[card2Id] = -1;
       setTimeout(() => {
-        this.setState(prevState => ({
-          shuffledCard: hideCard
-        }))
+        this.setState({
+          shuffledCard: hideCard,
+          // add score
+          score: this.state.score+=1
+        })
       }, 1000);
+      // increase score
+      console.log(this.state.score)
+        
     } else {
       const flipBack = this.state.isFlipped.slice();
       flipBack[card1Id] = false;
       flipBack[card2Id] = false;
       setTimeout(() => {
-        this.setState(prevState => ({ isFlipped: flipBack }));
+        this.setState( { isFlipped: flipBack });
       }, 1000);
     }
   };
@@ -79,24 +85,26 @@ class CardGame extends PureComponent {
   };
 
   isGameOver = () => {
-    return this.state.isFlipped.every((element, index, array) => element !== false);
+    return this.state.isFlipped.every((element) => element !== false);
   };
 
   render() {
     return (
      <div>
-       <Header restartGame={this.restartGame} />
+       <Header restartGame={this.restartGame} score={this.state.score}/>
        { this.isGameOver() ? <GameOver restartGame={this.restartGame} /> :
        <div className="grid-container">
           {
             this.state.shuffledCard.map((cardNumber, index) => 
+              <div className="single_card">
               <Card
                 key={index} 
                 id={index} 
                 cardNumber={cardNumber} 
                 isFlipped={this.state.isFlipped[index]} 
-                handleClick={this.handleClick}     
+                handleClick={this.handleClick}  
               />
+              </div>
             )
           }
         </div>
