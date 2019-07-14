@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "homepage": "https://lisaqvu.github.io/LessTrash/",
   "private": true,
+  "homepage": "https://lisaqvu.github.io/LessTrash",
   "dependencies": {
     "@material-ui/core": "^4.2.0",
     "bootstrap": "^4.3.1",
@@ -20,6 +21,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "predeploy": "yarn run build",
     "deploy": "gh-pages -d build",

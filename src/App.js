@@ -41,10 +41,10 @@ function Drag() {
 class App extends Component {
   render() {
     return (
-      <Router basename='/'>
+      <Router basename="/">
         <div>
           <nav className="navbar navbar-expand-lg indigo">
-            <Link to="./">
+            <Link to="/">
               <img className="logo" src={logo} alt={"logo"} />
             </Link>
 
@@ -53,18 +53,18 @@ class App extends Component {
               id="navbarText"
             >
               <ul className="navbar-nav ml-auto">
-              <li className="nav-item">
-                  <Link className="nav-link" to="./reduce">
+                <li className="nav-item">
+                  <Link className="nav-link" to="/reduce">
                     Reduce
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="./reuse">
+                  <Link className="nav-link" to="/reuse">
                     Reuse
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="./recycle">
+                  <Link className="nav-link" to="/recycle">
                     Recycle
                   </Link>
                 </li>
@@ -72,9 +72,9 @@ class App extends Component {
             </div>
           </nav>
           <Route path="/" exact component={Home} />
-          <Route path="/reduce" component={CardGame} />
-          <Route path="/reuse" component={Drag} />
-          <Route path="/recycle" component={Video} />
+          <Route path="/reduce/" component={CardGame} />
+          <Route path="/reuse/" component={Video} />
+          <Route path="/recycle/" component={Drag} />
         </div>
       </Router>
     );
