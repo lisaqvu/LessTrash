@@ -7,32 +7,35 @@ import { DndProvider } from "react-dnd";
 import HTML5Backend from "react-dnd-html5-backend";
 import logo from "./assets/logo.png";
 
-import YouTube from 'react-youtube';
+import YouTube from "react-youtube";
 
 function Video() {
-    const opts = {
-      height: '390',
-      width: '640',
-      playerVars: { // https://developers.google.com/youtube/player_parameters
-        autoplay: 1
-      }
-    };
-    
-    return (
-      <div className="container video">
+  const opts = {
+    height: "390",
+    width: "640",
+    playerVars: {
+      // https://developers.google.com/youtube/player_parameters
+      autoplay: 1
+    }
+  };
+
+  return (
+    <div className="container">
+      <div className="video">
       <YouTube
         videoId="37uk-ZffJ10"
         opts={opts}
         // onReady={this._onReady}
       />
       </div>
-    );
-    /* <Player url="https://media.w3.org/2010/05/sintel/trailer_hd.mp4" playing /> */
+    </div>
+  );
+  /* <Player url="https://media.w3.org/2010/05/sintel/trailer_hd.mp4" playing /> */
 }
 
 function Drag() {
   return (
-    <div>
+    <div className="container drag">
       <DndProvider backend={HTML5Backend}>
         <DnD />
       </DndProvider>
