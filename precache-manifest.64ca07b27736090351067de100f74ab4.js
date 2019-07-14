@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "90b2b06764350269029ca66dd186cb2d",
+    "revision": "b7070fa1c73eed341128287e606f4fa4",
     "url": "/LessTrash/index.html"
   },
   {
-    "revision": "2ec27fa001159edeb820",
+    "revision": "6591810ffe8d82a24cbf",
     "url": "/LessTrash/static/css/2.14686bf5.chunk.css"
   },
   {
-    "revision": "53c035aca0b1d29eab44",
-    "url": "/LessTrash/static/css/main.135d475b.chunk.css"
+    "revision": "beef257d7214f8ad2f95",
+    "url": "/LessTrash/static/css/main.da1c1c6a.chunk.css"
   },
   {
-    "revision": "2ec27fa001159edeb820",
-    "url": "/LessTrash/static/js/2.587b1f03.chunk.js"
+    "revision": "6591810ffe8d82a24cbf",
+    "url": "/LessTrash/static/js/2.5569b9a0.chunk.js"
   },
   {
-    "revision": "53c035aca0b1d29eab44",
-    "url": "/LessTrash/static/js/main.70b2f66f.chunk.js"
+    "revision": "beef257d7214f8ad2f95",
+    "url": "/LessTrash/static/js/main.c242193e.chunk.js"
   },
   {
     "revision": "c4ad602352cd01406937",
@@ -26,10 +26,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "02c71123b9407c411bc7a888ff017369",
     "url": "/LessTrash/static/media/card_back.02c71123.jpg"
-  },
-  {
-    "revision": "a2ef5859a9055429d97c5ec8eafba37c",
-    "url": "/LessTrash/static/media/coin.a2ef5859.png"
   },
   {
     "revision": "21a09852c80049d51a9a6180635adba4",
