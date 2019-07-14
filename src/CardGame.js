@@ -15,14 +15,19 @@ class CardGame extends PureComponent {
     prevCardId: -1,
     score: 0 
   };
+  
 
   static duplicateCard = () => {
-    return [0,1,2,3,4,5,6,7].reduce((preValue, current, index, array) => {
-      return preValue.concat([current, current])
-    },[]);
+    
+    // return [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16].reduce((preValue, current) => {
+    //   return preValue.concat([preValue, current])
+    // },[]);
+    var N = 16; 
+    return Array.apply(null, {length: N}).map(Number.call, Number);
   };
 
   handleClick = event => {
+    console.log(this.state.isFlipped);
     event.preventDefault();
     const cardId = event.target.id;
     const newFlipps = this.state.isFlipped.slice();
@@ -50,7 +55,7 @@ class CardGame extends PureComponent {
   };
 
   isCardMatch = (card1, card2, card1Id, card2Id) => {
-    if (card1 === card2) {
+    if (card1 === card2% 8 || card1%8 === card2) {
       const hideCard = this.state.shuffledCard.slice();
       hideCard[card1Id] = -1;
       hideCard[card2Id] = -1;
@@ -80,6 +85,7 @@ class CardGame extends PureComponent {
       shuffledCard: CardGame.duplicateCard().sort(() => Math.random() - 0.5),
       clickCount: 1,
       prevSelectedCard: -1,
+      score:0,
       prevCardId: -1
     });
   };
