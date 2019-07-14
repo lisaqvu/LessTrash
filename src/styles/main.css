@@ -68,7 +68,7 @@ body {
 .card-front {
   background-color: #8bc34a;
   box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
-  background: url(https://api.adorable.io/avatars/285/abott@adorable.png);
+  background: url(../assets/card_back.jpg);
 }
 
 .card-back {
@@ -130,7 +130,7 @@ p.slogan {
 .about_us_container {
   margin-top: 20px;
 }
-.about_us_table {
+.about_us_tasble {
   margin: auto;
 }
 .about_us_table img {
@@ -140,4 +140,12 @@ p.slogan {
 }
 .about_us_name {
   font-size: 10px;
+}
+.restart-button {
+  background-color: white;
+  border: 0;
+}
+.img_restart {
+  width: 50px;
+  height: 50px;
 }
